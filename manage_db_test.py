@@ -1,5 +1,4 @@
 import sqlite3
-from sqlite3.dbapi2 import connect
 
 conn = sqlite3.connect('./FlexA5_Torque_Control/mydb.db')
 cursor = conn.cursor()
