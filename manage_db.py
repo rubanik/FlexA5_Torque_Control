@@ -51,8 +51,9 @@ def init_db() -> sqlite3.Connection:
     try:
         # Создание таблицы
         db.execute("""CREATE TABLE data
-                    (time text, machine text, speed text,
-                    drive text, torque text,state text)
+                    (time text, machine text, drive text,
+                     torque text,current text, speed text,
+                     state text)
                 """)
     except:
         print("[!]Data Table Already Exist")
@@ -80,7 +81,7 @@ def write_to_db(db,data):
     State -     Текущее состояние машины"""
 
     try:
-        db.executemany("INSERT INTO data VALUES (?,?,?,?,?,?)", data)
+        db.executemany("INSERT INTO data VALUES (?,?,?,?,?,?,?)", data)
         db.commit()
         print('[INFO]Data has been written')
     except:
