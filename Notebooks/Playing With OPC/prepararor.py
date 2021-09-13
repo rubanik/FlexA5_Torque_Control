@@ -25,7 +25,7 @@ def prepare_list_of_data(data):
 
 
 def prepare_from_generator(generator):
-    """ Тут нужно доработать!"""
+    """ Тут нужно доработать!!"""
     count = 0
     pair = []
     out = []
